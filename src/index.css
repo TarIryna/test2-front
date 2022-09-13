@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("./fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: Tapestry;
+  src: url("./fonts/Tapestry-Regular.ttf");
+}
+@font-face {
+  font-family: Brush;
+  src: url("./fonts/WaterBrush-Regular.ttf");
+}
+@font-face {
+  font-family: Oleo;
+  src: url("./fonts/OleoScriptSwashCaps-Regular.ttf");
+}
+@font-face {
+  font-family: Dancing;
+  src: url("./fonts/DancingScript-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: Abril;
+  src: url("./fonts/AbrilFatface-Regular.ttf");
+}
+@font-face {
+  font-family: Cookie;
+  src: url("./fonts/Cookie-Regular.ttf");
+}
+@font-face {
+  font-family: Frank;
+  src: url("./fonts/FrankRuhlLibre-Regular.ttf");
+}
