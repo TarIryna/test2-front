@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Button, Select } from "./Categories.styled";
+import { Select } from "./Categories.styled";
 import {
   getCategories,
   getCategory,
@@ -12,6 +12,7 @@ import {
 } from "../../redux/collection/collection-operations";
 import Modal from "../../components/Modal";
 import Form from "../../components/Form";
+import Button from "../../components/Button";
 
 export default function Categories() {
   const dispatch = useDispatch();
@@ -49,9 +50,11 @@ export default function Categories() {
           <></>
         )}
       </Select>
-      <Button type="button" onClick={() => setModal(true)}>
-        Додати категорію
-      </Button>
+      <Button
+        title="Додати категорію"
+        type="button"
+        onClick={() => setModal(true)}
+      />
       <Modal active={modal} setActive={setModal}>
         <Form
           closeModal={closeModal}

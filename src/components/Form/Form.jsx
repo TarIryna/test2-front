@@ -23,6 +23,16 @@ export default function Form({ title, buttonTitle, closeModal }) {
 
   const onSubmitForm = async (e) => {
     e.preventDefault();
+    if(name.length === 0){
+      Toastify({
+        text: "Введіть, будь ласка, назву!",
+        className: "info",
+        style: {
+          background: "linear-gradient(to right, #4956e6, #3443eb)",
+        },
+      }).showToast();
+      return;
+    }
     switch (title) {
       case "Введіть нову категорію":
         if (categories.includes(name)) {
@@ -47,7 +57,7 @@ export default function Form({ title, buttonTitle, closeModal }) {
             text: "Така підкатегорія вже є, спробуйте інше ім'я :)",
             className: "info",
             style: {
-              background: "linear-gradient(to right, #ffcccc, #ff471a)",
+              background: "linear-gradient(to right, #e67d49, #ff471a)",
             },
           }).showToast();
           return;

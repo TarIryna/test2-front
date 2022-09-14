@@ -1,4 +1,4 @@
-import { Select, Button } from "./Products.styled";
+import { Select} from "./Products.styled";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Toastify from "toastify-js";
@@ -13,6 +13,7 @@ import {
   getProductsdb,
 } from "../../redux/collection/collection-selectors";
 import { addProduct } from "../../api/collectionApi";
+import Button from '../Button';
 
 export default function Products() {
   const [name, setName] = useState("");
@@ -62,9 +63,11 @@ export default function Products() {
           <></>
         )}
       </Select>
-      <Button type="button" onClick={onButton}>
-        Додати товар
-      </Button>
+      <Button
+        title="Додати товар"
+        type="button"
+        onClick={onButton}
+      />
     </>
   );
 }

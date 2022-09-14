@@ -2,9 +2,10 @@ import { useSelector, useDispatch } from "react-redux";
 import React, { useState } from "react";
 import { changeSubcategory } from "../../redux/collection/collection-actions";
 import { getSubcategories } from "../../redux/collection/collection-selectors";
-import { Button, Select } from "./Subcategories.styled";
+import { Select } from "./Subcategories.styled";
 import Modal from "../../components/Modal";
 import Form from "../../components/Form";
+import Button from "../../components/Button";
 
 export default function Subcategories() {
   const [modal, setModal] = useState(false);
@@ -34,9 +35,11 @@ export default function Subcategories() {
           <></>
         )}
       </Select>
-      <Button type="button" onClick={() => setModal(true)}>
-        Додати підкатегорію
-      </Button>
+      <Button
+        title="Додати підкатегорію"
+        type="button"
+        onClick={() => setModal(true)}
+      />
       <Modal active={modal} setActive={setModal}>
         <Form
           closeModal={closeModal}
