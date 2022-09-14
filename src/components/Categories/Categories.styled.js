@@ -6,4 +6,5 @@ export const Select = styled.select`
   border-radius: 10px;
   margin-bottom: 15px;
   margin-right: 10px;
+  font-family: Montserrat;
 `;

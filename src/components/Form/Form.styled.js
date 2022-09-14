@@ -6,3 +6,9 @@ export const FormCont = styled.form`
   justify-content: space-between;
   align-items: center;
 `;
+
+export const Input = styled.input`
+  padding: 5px;
+  border-radius: 10px;
+  border: 2px solid black;
+`;

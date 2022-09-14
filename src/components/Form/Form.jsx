@@ -1,4 +1,4 @@
-import { FormCont } from "./Form.styled";
+import { FormCont, Input } from "./Form.styled";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Toastify from "toastify-js";
@@ -13,6 +13,7 @@ import {
   fetchCategories,
   fetchSubcategories,
 } from "../../redux/collection/collection-operations";
+import Button from '../Button';
 
 export default function Form({ title, buttonTitle, closeModal }) {
   const dispatch = useDispatch();
@@ -82,10 +83,8 @@ export default function Form({ title, buttonTitle, closeModal }) {
   return (
     <FormCont type="submit" onSubmit={onSubmitForm}>
       <h5>{title}</h5>
-      <input type="text" name="name" value={name} onChange={onChangeInput} />
-      <button type="submit" key="submitBtn">
-        {buttonTitle}
-      </button>
+      <Input type="text" name="name" value={name} onChange={onChangeInput} />
+      <Button type="submit" title={buttonTitle}/>
     </FormCont>
   );
 }

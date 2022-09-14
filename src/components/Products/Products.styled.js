@@ -5,6 +5,7 @@ export const Select = styled.select`
   padding: 5px;
   border-radius: 10px;
   margin-right: 10px;
+  font-family: Montserrat;
 `;
 export const Button = styled.button`
   width: 150px;

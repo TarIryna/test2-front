@@ -10,4 +10,5 @@ export const Title = styled.h2`
 
 export const Container = styled.div`
   margin-top: 25px;
+  font-family: Montserrat;
 `;
