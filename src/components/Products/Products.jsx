@@ -1,4 +1,3 @@
-import { Select} from "./Products.styled";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Toastify from "toastify-js";
@@ -13,7 +12,8 @@ import {
   getProductsdb,
 } from "../../redux/collection/collection-selectors";
 import { addProduct } from "../../api/collectionApi";
-import Button from '../Button';
+import Button from "../Button";
+import Select from "../Select";
 
 export default function Products() {
   const [name, setName] = useState("");
@@ -51,23 +51,13 @@ export default function Products() {
 
   return (
     <>
-      <Select name="product" onChange={(e) => onChangeProduct(e)}>
-        <option value="null">Виберіть товар</option>
-        {products ? (
-          products.map((product) => (
-            <option value={product} key={product}>
-              {product}
-            </option>
-          ))
-        ) : (
-          <></>
-        )}
-      </Select>
-      <Button
-        title="Додати товар"
-        type="button"
-        onClick={onButton}
+      <Select
+        items={products}
+        placeholder="Виберіть товар"
+        name="products"
+        onChange={(e) => onChangeProduct(e)}
       />
+      <Button title="Додати товар" type="button" onClick={onButton} />
     </>
   );
 }

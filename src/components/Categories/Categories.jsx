@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Select } from "./Categories.styled";
-import {
-  getCategories,
-  getCategory,
-} from "../../redux/collection/collection-selectors";
+import { getCategories } from "../../redux/collection/collection-selectors";
 import { changeCategory } from "../../redux/collection/collection-actions";
 import {
   fetchCategories,
@@ -13,6 +9,7 @@ import {
 import Modal from "../../components/Modal";
 import Form from "../../components/Form";
 import Button from "../../components/Button";
+import Select from "../../components/Select";
 
 export default function Categories() {
   const dispatch = useDispatch();
@@ -38,18 +35,12 @@ export default function Categories() {
 
   return (
     <div>
-      <Select name="category" onChange={(e) => onChangeCategory(e)}>
-        <option value="">Виберіть категорію</option>
-        {categories ? (
-          categories.map((category) => (
-            <option value={category} key={category}>
-              {category}
-            </option>
-          ))
-        ) : (
-          <></>
-        )}
-      </Select>
+      <Select
+        items={categories}
+        placeholder="Виберіть категорію"
+        name="categories"
+        onChange={(e) => onChangeCategory(e)}
+      />
       <Button
         title="Додати категорію"
         type="button"
